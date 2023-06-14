@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Simple Calculator Project</h1>
+        <div id="form">
+           <form action="/" method="post">
+                <p>Type First Value</p>
+                <input type="number" name="first_digit" id="fd" placeholder="First Value">
+                <p>Choose an action</p>
+                <select name="action" style="width: 75%;">
+                    <option value="plus">plus(+)</option>
+                    <option value="minus">minus(-)</option>
+                    <option value="multiply">multiply(*)</option>
+                    <option value="divide">divide(/)</option>
+                    <option value="exponentiate">exponentiate(**)</option>
+                    <option value="extract_the_root">extract the root(**(1/2))</option>
+                </select>
+                <p>Type Second Value</p>
+                <input type="number" name="second_digit" id="fd" placeholder="Second Value">
+                <button type="submit" value="submit">Calculate</button>
+            </form> 
+            {%if answer%}
+            <div id="answer">{{answer}}</div>
+            {%endif%}
+        </div>
+        
+    </div>
+</body>
+</html>
